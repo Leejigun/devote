@@ -14,6 +14,9 @@
 		88FFE22429043CE60033F690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FFE22329043CE60033F690 /* Assets.xcassets */; };
 		88FFE22829043CE60033F690 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FFE22729043CE60033F690 /* Preview Assets.xcassets */; };
 		88FFE23029043DA10033F690 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 88FFE22F29043DA10033F690 /* Sound */; };
+		88FFE2362904F0960033F690 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FFE2342904F0960033F690 /* Item+CoreDataClass.swift */; };
+		88FFE2372904F0960033F690 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FFE2352904F0960033F690 /* Item+CoreDataProperties.swift */; };
+		88FFE23C2904F4A30033F690 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FFE23B2904F4A30033F690 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +26,12 @@
 		88FFE21F29043CE50033F690 /* devote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = devote.xcdatamodel; sourceTree = "<group>"; };
 		88FFE22129043CE50033F690 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88FFE22329043CE60033F690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		88FFE22529043CE60033F690 /* devote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = devote.entitlements; sourceTree = "<group>"; };
 		88FFE22729043CE60033F690 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88FFE22F29043DA10033F690 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
+		88FFE2342904F0960033F690 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88FFE2352904F0960033F690 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88FFE2392904F0E10033F690 /* devote.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = devote.entitlements; sourceTree = "<group>"; };
+		88FFE23B2904F4A30033F690 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +64,13 @@
 		88FFE21929043CE50033F690 /* devote */ = {
 			isa = PBXGroup;
 			children = (
+				88FFE23A2904F4960033F690 /* Utility */,
 				88FFE23329043E750033F690 /* Scene */,
 				88FFE23229043E490033F690 /* View */,
 				88FFE23129043E3A0033F690 /* Model */,
 				88FFE22E29043D930033F690 /* Resource */,
 				88FFE21A29043CE50033F690 /* devoteApp.swift */,
 				88FFE22329043CE60033F690 /* Assets.xcassets */,
-				88FFE22529043CE60033F690 /* devote.entitlements */,
-				88FFE21E29043CE50033F690 /* devote.xcdatamodeld */,
 				88FFE22629043CE60033F690 /* Preview Content */,
 			);
 			path = devote;
@@ -90,6 +95,10 @@
 		88FFE23129043E3A0033F690 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88FFE2392904F0E10033F690 /* devote.entitlements */,
+				88FFE2342904F0960033F690 /* Item+CoreDataClass.swift */,
+				88FFE2352904F0960033F690 /* Item+CoreDataProperties.swift */,
+				88FFE21E29043CE50033F690 /* devote.xcdatamodeld */,
 				88FFE21C29043CE50033F690 /* Persistence.swift */,
 			);
 			path = Model;
@@ -108,6 +117,14 @@
 				88FFE22129043CE50033F690 /* ContentView.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		88FFE23A2904F4960033F690 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				88FFE23B2904F4A30033F690 /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FFE2372904F0960033F690 /* Item+CoreDataProperties.swift in Sources */,
+				88FFE2362904F0960033F690 /* Item+CoreDataClass.swift in Sources */,
 				88FFE21B29043CE50033F690 /* devoteApp.swift in Sources */,
 				88FFE21D29043CE50033F690 /* Persistence.swift in Sources */,
+				88FFE23C2904F4A30033F690 /* Constants.swift in Sources */,
 				88FFE22229043CE50033F690 /* ContentView.swift in Sources */,
 				88FFE22029043CE50033F690 /* devote.xcdatamodeld in Sources */,
 			);
@@ -305,7 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = devote/devote.entitlements;
+				CODE_SIGN_ENTITLEMENTS = devote/Model/devote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"devote/Preview Content\"";
@@ -343,7 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = devote/devote.entitlements;
+				CODE_SIGN_ENTITLEMENTS = devote/Model/devote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"devote/Preview Content\"";
